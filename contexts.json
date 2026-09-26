@@ -1,0 +1,203 @@
+{
+  "aloof": {
+    "meaning": "not friendly or emotionally open; distant",
+    "daily": "He seemed aloof at first, but he was actually just shy.",
+    "natural": "A useful personality word, but slightly more literary than distant or cold.",
+    "scene": "Often describes a reserved character in a romance or period drama.",
+    "tags": [
+      "personality",
+      "daily"
+    ]
+  },
+  "bandwidth": {
+    "meaning": "data capacity; in offices, your capacity to take on more work",
+    "daily": "I do not have the bandwidth for another project this quarter.",
+    "natural": "The work sense is extremely common in US tech offices and is a polite way to say no.",
+    "scene": "Office scenes.",
+    "tags": [
+      "work"
+    ]
+  },
+  "bureaucracy": {
+    "meaning": "a system of complicated official rules and procedures",
+    "daily": "Getting the permit took months because of bureaucracy.",
+    "natural": "Almost always negative. Pronounced byur-AH-kruh-see.",
+    "scene": "Government office scenes.",
+    "tags": [
+      "work",
+      "formal"
+    ]
+  },
+  "cadence": {
+    "meaning": "a rhythm or regular pattern, in speech or in schedule",
+    "daily": "We moved to a biweekly meeting cadence.",
+    "natural": "The meeting-schedule sense is very common in US tech offices. Also the rise and fall of a speaker's voice.",
+    "scene": "Office scenes; also music and public speaking.",
+    "tags": [
+      "work",
+      "speaking"
+    ]
+  },
+  "caveat": {
+    "meaning": "an important warning or limitation",
+    "daily": "The result looks promising, with one caveat: the sample is small.",
+    "natural": "Common at work. The most natural pattern is with one caveat.",
+    "scene": "Often appears in legal, business, or investigative dialogue.",
+    "tags": [
+      "work",
+      "data"
+    ]
+  },
+  "discrepancy": {
+    "meaning": "a difference between two things that should match",
+    "daily": "There is a discrepancy between the dashboard and the raw query.",
+    "natural": "Core analyst vocabulary. Neutral, does not assign blame.",
+    "scene": "Audit and analytics work.",
+    "tags": [
+      "work",
+      "data"
+    ]
+  },
+  "dubious": {
+    "meaning": "not convinced; or questionable and probably unreliable",
+    "daily": "I am dubious about any plan that promises instant results.",
+    "natural": "You can be dubious about a claim, or describe a claim as dubious.",
+    "scene": "Mystery and political dramas use it when a story or motive seems suspicious.",
+    "tags": [
+      "daily",
+      "work"
+    ]
+  },
+  "frugal": {
+    "meaning": "careful with money, avoiding waste",
+    "daily": "They live frugally and save aggressively.",
+    "natural": "Positive, unlike cheap or stingy, which insult. A compliment about discipline.",
+    "scene": "Personal finance discussions.",
+    "tags": [
+      "finance",
+      "daily"
+    ]
+  },
+  "implicit": {
+    "meaning": "understood without being stated directly",
+    "daily": "There was an implicit expectation to stay late.",
+    "natural": "Its opposite is explicit. Implicit bias is a major workplace training topic.",
+    "scene": "Analytical and workplace discussions.",
+    "tags": [
+      "work",
+      "formal"
+    ]
+  },
+  "liability": {
+    "meaning": "a legal responsibility for damage; also a person or thing that creates risk",
+    "daily": "That old system is a liability.",
+    "natural": "In accounting, liabilities are what you owe, the opposite of assets. Casually, calling a person a liability is harsh.",
+    "scene": "Legal and financial contexts.",
+    "tags": [
+      "finance",
+      "legal",
+      "work"
+    ]
+  },
+  "mundane": {
+    "meaning": "ordinary, routine, and not very interesting",
+    "daily": "AI can automate mundane tasks and leave more time for judgment.",
+    "natural": "Common with task, detail, routine, and chore.",
+    "scene": "Character-driven films contrast mundane daily life with something extraordinary.",
+    "tags": [
+      "daily",
+      "work"
+    ]
+  },
+  "nuance": {
+    "meaning": "a small but important difference in meaning, feeling, or judgment",
+    "daily": "The headline number hides an important nuance in how customers behave.",
+    "natural": "Very useful professionally: add nuance, capture nuance, miss the nuance.",
+    "scene": "Legal and political dramas use it when a simple answer misses complexity.",
+    "tags": [
+      "work",
+      "data",
+      "daily"
+    ]
+  },
+  "nudge": {
+    "meaning": "a gentle push or prompt",
+    "daily": "I will nudge him about the deck tomorrow.",
+    "natural": "Very useful at work: a polite way to describe a reminder. Also a behavioral economics concept from the book Nudge.",
+    "scene": "Office communication.",
+    "tags": [
+      "work",
+      "daily"
+    ]
+  },
+  "opaque": {
+    "meaning": "hard to understand; literally, not letting light through",
+    "daily": "The decision-making process felt opaque to the team.",
+    "natural": "Common professionally for systems, pricing, rules, and explanations.",
+    "scene": "Corporate and political stories use it to suggest secrecy or confusion.",
+    "tags": [
+      "work",
+      "daily"
+    ]
+  },
+  "pedantic": {
+    "meaning": "too focused on small rules or details, especially when correcting people",
+    "daily": "I do not want to sound pedantic, but those two terms mean different things.",
+    "natural": "Often self-aware: not to be pedantic, but…",
+    "scene": "Academic and workplace comedies use it for a know-it-all character.",
+    "tags": [
+      "spoken",
+      "work"
+    ]
+  },
+  "plummet": {
+    "meaning": "to fall very fast and steeply",
+    "daily": "Conversion plummeted after the redesign.",
+    "natural": "Reserve it for dramatic drops. Its opposite is soar. Excellent for metric narratives.",
+    "scene": "Business and news reporting.",
+    "tags": [
+      "work",
+      "data"
+    ]
+  },
+  "revamp": {
+    "meaning": "to redesign or improve something substantially",
+    "daily": "We revamped the onboarding flow.",
+    "natural": "Informal-leaning but fully acceptable at work. Lighter than overhaul.",
+    "scene": "Product and business contexts.",
+    "tags": [
+      "work",
+      "casual"
+    ]
+  },
+  "ruminate": {
+    "meaning": "to keep thinking deeply, often too much, about the same thing",
+    "daily": "I tend to ruminate after a tough meeting.",
+    "natural": "More clinical or literary than dwell on. Everyday: I keep dwelling on it.",
+    "scene": "Introspective dramas use it for a character unable to let something go.",
+    "tags": [
+      "emotion",
+      "formal"
+    ]
+  },
+  "scarce": {
+    "meaning": "available in very limited supply",
+    "daily": "Engineering time is scarce this quarter.",
+    "natural": "Pronounced SKAIRS. Scarcity is the noun and a central economics concept.",
+    "scene": "Economics and resource discussions.",
+    "tags": [
+      "work",
+      "finance"
+    ]
+  },
+  "stringent": {
+    "meaning": "very strict and demanding",
+    "daily": "The study used stringent criteria for including participants.",
+    "natural": "Common with rules, requirements, standards, and regulations.",
+    "scene": "Medical, legal, and corporate dialogue uses it for strict controls.",
+    "tags": [
+      "work",
+      "formal"
+    ]
+  }
+}

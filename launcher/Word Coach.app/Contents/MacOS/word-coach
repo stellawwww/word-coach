@@ -1,0 +1,29 @@
+#!/bin/bash
+# Where the repo lives. Override with WORD_COACH_APP_DIR if you cloned it elsewhere.
+APP_DIR="${WORD_COACH_APP_DIR:-$HOME/Documents/GitHub/word-coach}"
+LOG="$APP_DIR/.launch.log"
+
+PORT=8765
+if [ -f "$APP_DIR/.env" ]; then
+  P=$(grep -E '^[[:space:]]*WORD_COACH_PORT=' "$APP_DIR/.env" | tail -1 | cut -d= -f2 | tr -d ' "'"'"'')
+  [ -n "$P" ] && PORT="$P"
+fi
+URL="http://127.0.0.1:$PORT"
+
+notify() { osascript -e "display notification \"$1\" with title \"Word Coach\"" >/dev/null 2>&1; }
+
+if curl -s -o /dev/null --max-time 2 "$URL"; then
+  open "$URL"
+  exit 0
+fi
+
+notify "Starting… your browser will open in a moment."
+PYTHONUNBUFFERED=1 nohup /bin/bash "$APP_DIR/start.command" >"$LOG" 2>&1 &
+
+for i in $(seq 1 600); do
+  if curl -s -o /dev/null --max-time 2 "$URL"; then exit 0; fi
+  sleep 1
+done
+
+notify "Didn't start in time. Check .launch.log in the Word Coach folder."
+exit 1

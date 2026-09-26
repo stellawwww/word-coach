@@ -1,0 +1,16 @@
+# secrets / local config
+.env
+.word-coach-settings.json
+.launch.log
+# personal data & app-generated files
+contexts.backup.*.json
+sample/notes/*
+!sample/notes/.gitkeep
+.word-coach-backups/
+_Review Log.md
+Youdao*
+*.xlsx
+# misc
+.DS_Store
+.claude/
+__pycache__/

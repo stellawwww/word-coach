@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stella's Obsidian-first daily vocabulary and pronunciation coach." />
+    <title>Stella Word Coach</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Stella Word Coach home">
+          <span class="brand-mark">S</span>
+          <span><strong>Word Coach</strong><small>Speak it · place it · keep it</small></span>
+        </a>
+        <div class="header-actions">
+          <span class="save-state" id="save-state"><span class="status-dot"></span> Obsidian connected</span>
+          <button class="quiet-button" id="add-word-button" type="button">＋ Word</button>
+          <button class="quiet-button" id="settings-button" type="button">Settings</button>
+          <button class="quiet-button backup-button" id="backup-button" type="button">Backup</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="progress-row" aria-label="Session progress">
+          <span class="progress-label">TODAY</span>
+          <div class="progress-track"><span id="progress-fill"></span></div>
+          <strong id="progress-number">1 of 8</strong>
+        </section>
+
+        <section class="study-grid">
+          <article class="word-card">
+            <div class="word-topline">
+              <span class="number-pill" id="source-number">#257</span>
+              <span class="mastery-pill" id="mastery">New</span>
+            </div>
+
+            <div class="word-heading">
+              <h1 id="word">gratuities</h1>
+              <p class="phonetic" id="phonetic">Loading pronunciation…</p>
+              <div class="audio-actions">
+                <button class="audio-button primary" id="speak-word" type="button"><span>▶</span> US</button>
+                <button class="audio-button" id="speak-slow" type="button">½× Slow</button>
+              </div>
+            </div>
+
+            <div class="usage-block">
+              <div class="section-label"><span class="dot coral"></span> Plain English</div>
+              <p class="meaning" id="meaning">Tips—extra money given for service.</p>
+            </div>
+
+            <div class="usage-block example-block">
+              <div class="section-label"><span class="dot blue"></span> Everyday English</div>
+              <blockquote id="daily-example">“Gratuities are already included in the bill.”</blockquote>
+              <button class="listen-sentence" id="speak-example" type="button">▶ Hear sentence</button>
+              <p class="natural-note" id="natural-note"></p>
+            </div>
+
+            <div class="personal-note">
+              <button class="note-add" id="note-add" type="button">＋ Add a note</button>
+              <div class="note-preview-wrap" id="note-preview-wrap" hidden>
+                <div><span>Your note</span><p id="note-preview"></p></div>
+                <button id="note-edit" type="button">Edit</button>
+              </div>
+              <div class="note-editor" id="note-editor" hidden>
+                <div class="note-editor-head">
+                  <label for="my-note">Anything useful to future-you</label>
+                  <span class="saved-badge" id="saved-badge">Saved in Obsidian</span>
+                </div>
+                <textarea id="my-note" rows="4" placeholder="Meaning, connotation, pronunciation, where you heard it…"></textarea>
+                <div class="note-proof"><code id="obsidian-path"></code><span id="save-time">Every edit is saved automatically.</span></div>
+                <div class="note-editor-actions">
+                  <button class="quiet-button" id="note-cancel" type="button">Cancel</button>
+                  <button class="solid-button" id="note-done" type="button">Done</button>
+                </div>
+              </div>
+              <div hidden aria-hidden="true"><textarea id="my-example"></textarea><input id="my-context" /><input id="pronunciation-note" /></div>
+            </div>
+
+            <section class="ai-coach">
+              <button class="ai-toggle" id="ai-toggle" type="button" aria-expanded="false" aria-controls="ai-panel">
+                <span>✦ Ask AI about this word</span><span aria-hidden="true">＋</span>
+              </button>
+              <div class="ai-panel" id="ai-panel" hidden>
+                <div class="ai-panel-head">
+                  <div><span>CONTEXT-AWARE COACH</span><strong>Ask about <em id="ai-word">gratuities</em></strong></div>
+                  <span class="ai-status" id="ai-status">Checking…</span>
+                </div>
+                <p class="ai-context-line" id="ai-context-line">AI sees this word, your note, and the current video sentence.</p>
+                <div class="ai-suggestions">
+                  <button type="button" data-ai-question="Is this word usually negative, positive, or neutral?">Is it negative?</button>
+                  <button type="button" data-ai-question="Does this sound natural in everyday American English?">Everyday English?</button>
+                  <button type="button" data-ai-question="Explain how this word is being used in the current video context.">Explain this video</button>
+                  <button type="button" data-ai-question="Please check my understanding based on the note I wrote.">Check my note</button>
+                </div>
+                <div class="ai-messages" id="ai-messages" aria-live="polite"></div>
+                <form class="ai-form" id="ai-form">
+                  <textarea id="ai-question" rows="2" maxlength="1200" aria-label="Your AI question" placeholder="e.g. Is aloof always negative when describing a person?"></textarea>
+                  <button id="ai-send" type="submit">Ask</button>
+                </form>
+                <p class="ai-privacy">Nothing is sent until you press Ask. Answers stay in this session unless you add one to your Obsidian note.</p>
+              </div>
+            </section>
+
+            <div class="scene-links">
+              <a id="playphrase-link" href="#" target="_blank" rel="noreferrer">PlayPhrase · film &amp; TV ↗</a>
+              <a id="cambridge-link" href="#" target="_blank" rel="noreferrer">Cambridge audio ↗</a>
+            </div>
+            <p class="scene-note" id="scene-note"></p>
+
+            <div class="rating-bar">
+              <span>How did that feel?</span>
+              <div>
+                <button class="rate" data-rating="again">Again <small>tomorrow</small></button>
+                <button class="rate" data-rating="hard">Hard <small>3 days</small></button>
+                <button class="rate good" data-rating="good">Good <small>1–4 weeks</small></button>
+              </div>
+            </div>
+            <div class="word-nav">
+              <button id="previous-word" class="quiet-button" type="button">← Previous</button>
+              <button id="next-word" class="next-button" type="button">Next word →</button>
+            </div>
+          </article>
+
+          <section class="video-card">
+            <div class="video-toolbar">
+              <span><i class="live-dot"></i> Real speech</span>
+              <label for="youglish-accent">Accent
+                <select id="youglish-accent">
+                  <option value="us">US</option><option value="uk">UK</option><option value="ca">Canada</option><option value="aus">Australia</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="youglish-consent" id="youglish-consent">
+              <p><strong>Enable real-world video</strong><span>YouGlish / YouTube · notes remain in Obsidian</span></p>
+              <button id="enable-youglish" type="button">Enable once</button>
+            </div>
+            <div class="video-placeholder" id="video-placeholder"><div><span>▶</span><p>Real speakers will appear here.</p></div></div>
+
+            <div class="youglish-experience" id="youglish-experience" hidden>
+              <div class="youglish-frame" id="youglish-widget" aria-label="Embedded YouGlish video player"></div>
+              <div class="youglish-controls">
+                <button id="yg-play" type="button" class="yg-play-button">▶ Play</button><button id="yg-previous" type="button">← Speaker</button><button id="yg-replay" type="button">↻ Replay</button><button id="yg-speed" type="button">0.75×</button><button id="yg-next" type="button">Speaker →</button>
+              </div>
+              <div class="sentence-capture">
+                <div class="sentence-capture-head">
+                  <div><span>CAPTURED CONTEXT</span><small>Built from the rolling captions. Edit before saving.</small></div>
+                  <button id="clear-caption" type="button">Clear</button>
+                </div>
+                <textarea id="youglish-caption" rows="3" placeholder="The sentence context will build here as the speaker talks…"></textarea>
+                <div class="sentence-actions">
+                  <span id="caption-state">Waiting for speech…</span>
+                  <button id="save-caption" type="button" disabled>Save to Obsidian</button>
+                </div>
+              </div>
+
+              <details class="example-drawer">
+                <summary><span>5 examples</span><strong id="example-tray-status">Collecting from the official widget…</strong></summary>
+                <div class="example-drawer-tools"><span>Save only the useful ones.</span><a id="playphrase-tray-link" href="#" target="_blank" rel="noreferrer">More on PlayPhrase ↗</a></div>
+                <div class="example-tray" id="example-tray" aria-live="polite"></div>
+              </details>
+
+              <div class="youglish-foot">
+                <a href="https://youglish.com/" target="_blank" rel="noreferrer">Powered by YouGlish.com</a><span>·</span><a href="https://www.youtube.com/t/terms" target="_blank" rel="noreferrer">YouTube Terms</a><span>·</span><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google Privacy</a>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="app-dialog" id="settings-dialog">
+      <form id="settings-form">
+        <div class="dialog-head"><div><span>WORD COACH</span><h2>Settings</h2></div><button class="dialog-close" type="button" data-close-dialog="settings-dialog">×</button></div>
+        <label>Total words per day<input id="daily-count" type="number" min="3" max="30" step="1" value="20" /></label>
+        <p class="form-help">20 is the combined total: due review words fill the list first, then new words, then familiar words. The list changes each local calendar day and stays stable during that day.</p>
+        <hr />
+        <label>AI provider
+          <select id="ai-provider"><option value="openai">OpenAI</option><option value="compatible">Superlinear / OpenAI-compatible</option></select>
+        </label>
+        <label>API token<input id="ai-token" type="password" autocomplete="off" placeholder="Leave blank to keep the saved token" /></label>
+        <label>Base URL<input id="ai-base-url" type="url" placeholder="https://api.openai.com/v1" /></label>
+        <label>Model<input id="ai-model" type="text" placeholder="Model name from your provider" /></label>
+        <p class="form-help" id="token-help">The token is sent only to this local server, saved in a private local settings file, and never echoed back into the page.</p>
+        <div class="dialog-actions"><button class="quiet-button" type="button" data-close-dialog="settings-dialog">Cancel</button><button class="solid-button" id="save-settings" type="submit">Save settings</button></div>
+      </form>
+    </dialog>
+
+    <dialog class="app-dialog" id="add-word-dialog">
+      <form id="add-word-form">
+        <div class="dialog-head"><div><span>VOCABULARY</span><h2>Add a word</h2></div><button class="dialog-close" type="button" data-close-dialog="add-word-dialog">×</button></div>
+        <label>Word or short phrase<input id="new-word" type="text" maxlength="100" required placeholder="e.g. nonchalant" /></label>
+        <label>Optional first note<textarea id="new-word-note" rows="4" placeholder="Why you saved it, your guess, or where you heard it…"></textarea></label>
+        <label class="checkbox-line"><input id="add-to-today" type="checkbox" checked /> Study it now</label>
+        <div class="dialog-actions"><button class="quiet-button" type="button" data-close-dialog="add-word-dialog">Cancel</button><button class="solid-button" type="submit">Add word</button></div>
+      </form>
+    </dialog>
+
+    <dialog class="completion-dialog" id="completion-dialog">
+      <div class="completion-mark">✓</div><p>SESSION COMPLETE</p><h2>Congrats! You’ve finished today’s vocabulary study.</h2><span id="completion-summary">20 words reviewed</span>
+      <div class="dialog-actions"><button class="quiet-button" id="review-again" type="button">Review again</button><button class="solid-button" id="finish-session" type="button">Done for today</button></div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
