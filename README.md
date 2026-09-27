@@ -2,7 +2,6 @@
 
 **A personal English word coach for non-native professionals, built with AI.**
 
-<!-- TODO: replace with docs/demo.gif (15–25s: word card → real-voice video → Ask AI → mark reviewed) -->
 ![Word Coach demo](docs/demo.gif)
 
 ## Why I built it
@@ -40,7 +39,7 @@ and reviewed every diff. Things I changed by hand or caught in review:
 ## Quickstart
 
 ```bash
-git clone https://github.com/<your-username>/word-coach.git
+git clone https://github.com/stellawwww/word-coach.git
 cd word-coach
 python3 server.py        # opens http://127.0.0.1:8765 with 20 sample words
 ```
